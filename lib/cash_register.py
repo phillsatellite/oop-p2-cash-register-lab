@@ -36,7 +36,6 @@ class CashRegister:
         })
 
     def apply_discount(self):
-        #Tests want to check discount value only
         if self.discount == 0:
             print("There is no discount to apply.")
             return
@@ -44,7 +43,7 @@ class CashRegister:
         discount_amount = self.total * (self.discount / 100)
         self.total -= discount_amount
 
-        #Print the success message EXACTLY as tests require
+        #Print the success message
         print(f"After the discount, the total comes to ${int(self.total)}.")
 
     def void_last_transaction(self):
